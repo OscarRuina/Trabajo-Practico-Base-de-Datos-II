@@ -1,4 +1,4 @@
-package Datos;
+package datos;
 
 public class Empleado extends Persona{
 
