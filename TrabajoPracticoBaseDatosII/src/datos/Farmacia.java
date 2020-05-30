@@ -1,18 +1,19 @@
 package datos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Farmacia {
 	
 	private int puntoVenta;//unico para cada sucursal
 	private Domicilio domicilio;
-	private List<Cliente> clientes;
-	private List<Empleado> empleados;
+	private List<Persona> personas;
 	
 	public Farmacia(int puntoVenta, Domicilio domicilio) {
 		super();
 		this.puntoVenta = puntoVenta;
 		this.domicilio = domicilio;
+		this.personas = new ArrayList<Persona>();
 	}
 
 	public int getPuntoVenta() {
@@ -31,21 +32,16 @@ public class Farmacia {
 		this.domicilio = domicilio;
 	}
 
-	public List<Cliente> getClientes() {
-		return clientes;
+	public List<Persona> getPersonas() {
+		return personas;
 	}
-
-	public void setClientes(List<Cliente> clientes) {
-		this.clientes = clientes;
-	}
-
-	public List<Empleado> getEmpleados() {
-		return empleados;
-	}
-
-	public void setEmpleados(List<Empleado> empleados) {
-		this.empleados = empleados;
-	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

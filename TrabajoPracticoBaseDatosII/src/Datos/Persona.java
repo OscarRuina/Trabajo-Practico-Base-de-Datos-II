@@ -2,30 +2,35 @@ package datos;
 
 public class Persona {
 
-	protected 	int	 		dni;
-	protected 	String 		nombre;
-	protected	String		apellido;
-	protected	Domicilio	domicilio;
-	protected	ObraSocial	obrasocial;
+	private  	int	 		dni;
+	private 	String 		nombre;
+	private	    String		apellido;
+	private	    Domicilio	domicilio;
+	private 	ObraSocial	obrasocial;
+	private     boolean isEmpleado;
 	
-	public Persona(int dni, String nombre, String apellido, Domicilio domicilio, ObraSocial obrasocial) {
+	public Persona(int dni, String nombre, String apellido, Domicilio domicilio, ObraSocial obrasocial,
+			boolean isEmpleado) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.domicilio = domicilio;
 		this.obrasocial = obrasocial;
+		this.isEmpleado = isEmpleado;
 	}
 
-	public Persona(int dni, String nombre, String apellido, Domicilio domicilio) {
+	public Persona(int dni, String nombre, String apellido, Domicilio domicilio, boolean isEmpleado) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.domicilio = domicilio;
-		//this.obrasocial = obrasocial;
+		this.isEmpleado = isEmpleado;
 	}
-	
+
+
+
 	public int getDni() {
 		return dni;
 	}
@@ -65,6 +70,16 @@ public class Persona {
 	public void setObrasocial(ObraSocial obrasocial) {
 		this.obrasocial = obrasocial;
 	}
+
+	public boolean isEmpleado() {
+		return isEmpleado;
+	}
+
+	public void setEmpleado(boolean isEmpleado) {
+		this.isEmpleado = isEmpleado;
+	}
+	
+	
 	
 	
 }

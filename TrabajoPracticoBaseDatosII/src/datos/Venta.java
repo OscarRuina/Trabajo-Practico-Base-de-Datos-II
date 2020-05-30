@@ -1,19 +1,22 @@
 package datos;
 
 import java.time.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import datos.Persona;
 
 public class Venta {
 	
-	String numeroTicket;
-	int totalVentas;
-	LocalDate fecha;
-	int formaPago; //1 efectivo, 2 credito , 3 debito
-	/* Lista producto venta*/
-	float precioTotal;
-	Persona vendedor;
-	Persona cobrador;
-	Farmacia sucursal;
+	private String numeroTicket;
+	private int totalVentas;
+	private LocalDate fecha;
+	private int formaPago; //1 efectivo, 2 credito , 3 debito
+	private List<Producto> productos;
+	private float precioTotal;
+	private Persona vendedor;
+	private Persona cobrador;
+	private Farmacia sucursal;
 	
 	public Venta(String numeroTicket, int totalVentas, LocalDate fecha, int formaPago, float precioTotal,
 			Persona vendedor, Persona cobrador, Farmacia sucursal) {
@@ -26,6 +29,7 @@ public class Venta {
 		this.vendedor = vendedor;
 		this.cobrador = cobrador;
 		this.sucursal = sucursal;
+		this.productos = new ArrayList<Producto>();
 	}
 
 	public String getNumeroTicket() {
@@ -91,4 +95,11 @@ public class Venta {
 	public void setSucursal(Farmacia sucursal) {
 		this.sucursal = sucursal;
 	}
+
+	public List<Producto> getProductos() {
+		return productos;
+	}
+	
+	
+	
 }
