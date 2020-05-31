@@ -9,6 +9,7 @@ public class Farmacia {
 	private Domicilio domicilio;
 	private List<Persona> personas;
 	private List<Producto> productos;
+	private List<Venta> ventas;
 	
 	public Farmacia(int puntoVenta, Domicilio domicilio) {
 		super();
@@ -16,6 +17,7 @@ public class Farmacia {
 		this.domicilio = domicilio;
 		this.personas = new ArrayList<Persona>();
 		this.productos = new ArrayList<Producto>();
+		this.ventas = new ArrayList<Venta>();
 	}
 
 	public int getPuntoVenta() {
@@ -42,6 +44,9 @@ public class Farmacia {
 		return productos;
 	}
 	
+	public List<Venta> getVentas() {
+		return ventas;
+	}
 	
 	
 	
