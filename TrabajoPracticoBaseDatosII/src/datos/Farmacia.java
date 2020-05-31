@@ -8,12 +8,14 @@ public class Farmacia {
 	private int puntoVenta;//unico para cada sucursal
 	private Domicilio domicilio;
 	private List<Persona> personas;
+	private List<Producto> productos;
 	
 	public Farmacia(int puntoVenta, Domicilio domicilio) {
 		super();
 		this.puntoVenta = puntoVenta;
 		this.domicilio = domicilio;
 		this.personas = new ArrayList<Persona>();
+		this.productos = new ArrayList<Producto>();
 	}
 
 	public int getPuntoVenta() {
@@ -36,6 +38,9 @@ public class Farmacia {
 		return personas;
 	}
 	
+	public List<Producto> getProductos() {
+		return productos;
+	}
 	
 	
 	
