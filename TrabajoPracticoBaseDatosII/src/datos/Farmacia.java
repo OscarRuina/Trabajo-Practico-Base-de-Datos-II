@@ -6,14 +6,16 @@ import java.util.List;
 public class Farmacia {
 	
 	private int puntoVenta;//unico para cada sucursal
+	private String nombre;
 	private Domicilio domicilio;
 	private List<Persona> personas;
 	private List<Producto> productos;
 	private List<Venta> ventas;
 	
-	public Farmacia(int puntoVenta, Domicilio domicilio) {
+	public Farmacia(int puntoVenta, String nombre,Domicilio domicilio) {
 		super();
 		this.puntoVenta = puntoVenta;
+		this.nombre = nombre;
 		this.domicilio = domicilio;
 		this.personas = new ArrayList<Persona>();
 		this.productos = new ArrayList<Producto>();
@@ -26,6 +28,14 @@ public class Farmacia {
 
 	public void setPuntoVenta(int puntoVenta) {
 		this.puntoVenta = puntoVenta;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public Domicilio getDomicilio() {
